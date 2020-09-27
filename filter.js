@@ -4,7 +4,7 @@ let valor = [5, 4, undefined, 2, 9];
 //valor = valor.filter( v => v % 2 == 0 );        //  output [ 4, 2 ]
 //valor = valor.filter( v => !( v % 2 == 1 ));    //  output [ 4, 2 ]  
 //valor = valor.filter( v => v !== undefined );   //  output [ 5, 4, 2, 9 ]
-valor = valor.filter( v => !( v % 2 ));         //  output [ 4, undefined, 2 ]
+//valor = valor.filter( v => !( v % 2 ));         //  output [ 4, undefined, 2 ]
 //valor = valor.filter( v => !v );                //  output [ undefinded ]
 //valor = valor.filter( v => v < 3 == 0);           //  output [ 5, 4, undefined, 9 ]
 
