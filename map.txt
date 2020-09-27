@@ -1,0 +1,98 @@
+
+/*
+const a = map([1, 2, 3], function (num) {
+  return num * 3
+})
+const b = map({ one: 1, two: 2, three: 3 }, function (num, key, obh) {
+  return { num: num * 3, key }
+})
+const c = map(
+  [
+    [1, 2],
+    [3, 4]
+  ],
+  ([f]) => f            //_.first
+)
+console.log('~~~~~~~~~~~~~~~~~~~v0~~~~~~~~~~~~~~~~~')
+
+console.log(a)
+console.log(b)
+console.log(c)
+*/
+/**
+ * Produces a new array of values by mapping each value in list through /// Produce una nueva matriz de valores mapeando cada valor en la lista a través
+ * a transformation function (iteratee). The iteratee is passed three   /// de una función de transformación (iteratee). Al iteratee se le pasan tres argumentos:
+ * arguments: the value, then the index (or key) of the iteration, and  /// el valor, luego el índice (o clave) de la iteración
+ * finally a reference to the entire list.                              /// y finalmente una referencia a toda la lista.
+ * maps the values and saves the object keys!                           /// mapea los valores y guarda las claves de objeto!
+ * @param {*} obj - can be an Array<any> or normal object               /// puede ser un objeto Array <any> o normal
+ * @param {(any, any, any) => any} fun - the callback function          /// la función de devolución de llamada.
+ * @param {*} context - the `this`
+ */
+/*
+const map2 = (obj, fun, context) => {
+  const holder = []
+  for (const key in obj) {
+    holder.push(
+      context ? fun.call(context, obj[key], key, obj) : fun(obj[key], key, obj)
+    )
+  }
+  return holder
+}
+
+console.log('~~~~~~~~~~~~~~~~~~~v2~~~~~~~~~~~~~~~~~')
+
+const a2 = map2([1, 2, 3], function (num) {
+  return num * 3
+})
+const b2 = map2({ one: 1, two: 2, three: 3 }, function (num, key, obj) {
+  return { num, key, obj }
+})
+const c2 = map2(
+  [
+    [1, 2],
+    [3, 4]
+  ],
+  ([f]) => f
+)
+const d2 = map2(
+  [
+    { name: 'Avelino', score: 10 },
+    { name: 'Richard', score: 20 },
+    { name: 'Andy', score: 30 }
+  ],
+  ({ score, name }, idx, arr) => ({ name, score: score ** 2 })
+)
+
+console.log(a2)
+console.log(b2)
+console.log(c2)
+console.log(d2)
+
+console.log('~~~~~~~~~~~~~~~~~~~v3~~~~~~~~~~~~~~~~~')
+
+const map3 = (obj, fun, context) => {
+  for (const key in obj) {
+    obj[key] = context
+      ? fun.call(context, obj[key], key, obj)
+      : fun(obj[key], key, obj)
+  }
+  return obj
+}
+
+const b3 = map3({ one: 1, two: 2, three: 3 }, function (num, key, obh) {
+  return num ** 2
+})
+
+const d3 = map3(
+  [
+    { name: 'Avelino', score: 10 },
+    { name: 'Richard', score: 20 },
+    { name: 'Andy', score: 30 }
+  ],
+  ({ score, name }, idx, arr) => ({ name, score: score ** 2 })
+)
+
+console.log(d3)
+console.log(b3)
+*/
