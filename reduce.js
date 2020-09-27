@@ -1,4 +1,4 @@
-//const { reduce, each, values } = require('underscore')
+const _ = require('underscore');
 let valor = [5, 4, 1, 2, 9];
 // let masAlto = valor.reduce((acc, val) =>{ // El valor mas alto del array
 //   if(val > acc){
@@ -8,7 +8,7 @@ let valor = [5, 4, 1, 2, 9];
 // });
 // in a line
 // numero mas alto
-let masAlto = valor.reduce(( a, v ) => v > a ? v : a);
+let masAlto = valor.reduce(( acc, val ) => val > acc ? vall : acc);
 console.log(masAlto);                           //output :    9          
 // numero mas bajo
 let masBajo = valor.reduce(( acc, val ) => val < acc ? val : acc);

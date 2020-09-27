@@ -1,4 +1,4 @@
-const { filter } = require('underscore')
+const _ = require('underscore')
 
 let valor = [5, 4, undefined, 2, 9];
 //valor = valor.filter( v => v % 2 == 0 );        //  output [ 4, 2 ]

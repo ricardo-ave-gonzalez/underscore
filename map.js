@@ -1,4 +1,4 @@
-const { map, random } = require('underscore')
+const _ = require('underscore')
 
 let valor = [ 4, 8, 1, 2, 9 ];
 
