@@ -17,13 +17,13 @@ console.log(masBajo);                           //output :    1
 let numerosImpares = valor.reduce(( acc, val ) => val = ( val % 2 ) ?  acc + val : acc ); 
 console.log(numerosImpares);                    //output :    15
 // la multiplicación de los impares
-let imparesMultiplicados = valor.reduce(( acc, val ) => val = ( val % 2 ) ? (acc * val) : acc ); 
+let imparesMultiplicados = valor.reduce(( acc, val ) => val = ( val % 2 ) ? ( acc * val ) : acc ); 
 console.log(imparesMultiplicados);              //output :    45
 //la suma de todos los elementos del array
-let sumaTotal = valor.reduce((acc, val) => acc + val);
+let sumaTotal = valor.reduce(( acc, val ) => acc + val);
 console.log(sumaTotal);                         //output :    21
 //la ruma de todos los elementos del array
-let restaTotal = valor.reduce((acc, val) => acc - val);
+let restaTotal = valor.reduce(( acc, val ) => acc - val);
 console.log(restaTotal);                        //output :    -11
 /**
  * https://underscorejs.org/                     
