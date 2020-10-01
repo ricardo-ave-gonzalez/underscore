@@ -3,6 +3,6 @@ const _ = require('underscore');
 // (predicado), o indefinido si ningún valor pasa la prueba. 
 // La función regresa tan pronto como encuentra un elemento aceptable y 
 // no recorre toda la lista.
-valor = [1, 2, 3, 4, 5, 6];
-let siempre = _.find(valor,(num)=>(num % 2 == 0));
+arr = [1, 2, 3, 4, 5, 6];
+let siempre = _.find(z,(num)=>(num % 2 == 0));
 console.log(siempre)

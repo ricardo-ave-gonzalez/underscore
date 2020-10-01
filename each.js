@@ -1,7 +1,6 @@
-const { each } = require('underscore');
-const { keys, throttle } = require('underscore');
+const { _ } = require('underscore');
 
-/*
+
 var arr = [1,2,3,4,5,6,7,8];
 var arraicito = arr.reverse();
 console.log(arraicito);
@@ -12,20 +11,20 @@ _.each(arr, (value, index, list)=>{
     console.log(list);
 })
 
-var jObj = {
+var obj = {
     name : "Avelino",
     age : 32,
     ocupation : "deverlop"
 }
 
-_.each(jObj, (value, key, theObject)=>{
+_.each(obj, (value, key, obj)=>{
     console.log(`Key-> ,${key}, "Value->", ${value}`);
-    console.log(theObject);
+    console.log(obj);
 })
-*/
 
-each([1,2,3], console.log);
-each({ one: 1, two: 2, three: 3 }, console.log);
+
+_.each([1,2,3], console.log);
+_.each({ one: 1, two: 2, three: 3 }, console.log);
 
 const user = {
     friends: {
@@ -36,7 +35,7 @@ const user = {
     }
 }
 
-each(
+_.each(
     ['user1', 'user4', 'user5'],
     (val) => {
         console.log(this[val])
