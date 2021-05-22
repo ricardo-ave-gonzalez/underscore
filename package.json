@@ -1,0 +1,24 @@
+{
+  "name": "Underscore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "each.js",
+  "dependencies": {
+    "underscore": "^1.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardo-ave-gonzalez/Underscore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardo-ave-gonzalez/Underscore/issues"
+  },
+  "homepage": "https://github.com/ricardo-ave-gonzalez/Underscore#readme"
+}
