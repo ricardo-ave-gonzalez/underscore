@@ -8,7 +8,7 @@ let arr = [5, 4, 1, 2, 9];
 // });
 // in a line
 // numero mas alto
-let masAlto = arr.reduce(( acc, val ) => val > acc ? vall : acc);
+let masAlto = arr.reduce(( acc, val ) => val > acc ? val : acc);
 console.log(masAlto);                           //output :    9          
 // numero mas bajo
 let masBajo = arr.reduce(( acc, val ) => val < acc ? val : acc);
