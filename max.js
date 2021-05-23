@@ -3,7 +3,7 @@ const { max } = require('underscore')
 const arr = [
   { name: 'ricardito', age: 32 },
   { name: 'franquito', age: 25 },
-  { name: 'greizzinio', age: 1 } 
+  { name: 'greizzinio', age: 2 }
 ]
 
 console.log(max(arr, (arr) => arr.age))
