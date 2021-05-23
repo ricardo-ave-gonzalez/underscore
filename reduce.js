@@ -1,13 +1,17 @@
-const _ = require('underscore');
+const { reduce } = require('underscore');
+
 let arr = [5, 4, 1, 2, 9];
-// let masAlto = valor.reduce((acc, val) =>{ // El valor mas alto del array
-//   if(val > acc){
-//     acc = val;
-//   }
-//   return acc;
-// });
-// in a line
-// numero mas alto
+/**
+ * 
+ *      let masAlto = valor.reduce((acc, val) =>{ 
+ *          if(val > acc){
+ *             acc = val;
+ *             }
+ *          return acc;
+ *      });
+ *  
+ */     
+
 let masAlto = arr.reduce(( acc, val ) => val > acc ? val : acc);
 console.log(masAlto);                           //output :    9          
 // numero mas bajo
@@ -26,7 +30,9 @@ console.log(sumaTotal);                         //output :    21
 let restaTotal = arr.reduce(( acc, val ) => acc - val);
 console.log(restaTotal);                        //output :    -11
 /**
- * https://underscorejs.org/                     
+ * 
+ * https://underscorejs.org/ 
+ * :)
  *  
 /***/
 
