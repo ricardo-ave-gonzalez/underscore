@@ -1,3 +1,6 @@
+const { _ } = require('underscore');
+
+
 let contratistas = [
     {
         "id": "32e9ab05-a3a0-404d-9a4b-b9148b4e95f5",
@@ -75,6 +78,79 @@ let contratistas = [
                     },
                     {
                         "id": "e9038321-5385-4153-8610-fb1d302702aa",
+                        "documentacion": "Constancia de antecedentes penales",
+                        "fechaDeCarga": "04/06/2021 ",
+                        "fechaDeVencimiento": "04/06/2021 ",
+                        "accion": "VISTO",
+                        "estado": "AMARILLO",
+                        "aprobadoPor": "Coca Cola Company",
+                        "observaciones": "Mauris et neque. Phasellus vehicula"
+                    }
+                ]
+            },
+            {
+                "id": "99980d5a-f73b-423c-8c68-8dba0cd9ee3f",
+                "nombre": "Franco",
+                "apellido": "Gonzalez",
+                "dni": "22161363",
+                "cuit": "20221613634",
+                "email": "f.gonzalez@gmail.com",
+                "telefono": "45454545",
+                "docObjetoDeVisita": [
+                    {
+                        "id": "zzbba57b-baff-4b85-a952-47d3f28ab525",
+                        "documentacion": "Programa de seguridad",
+                        "fechaDeCarga": "04/06/2021 ",
+                        "fechaDeVencimiento": "04/06/2021 ",
+                        "accion": "NO_VISTO",
+                        "estado": "VERDE",
+                        "aprobadoPor": "Laia S.A.",
+                        "observaciones": "Integer vehicula ac magna."
+                    },
+                    {
+                        "id": "zzff1e0f-1338-4b02-82fd-8fbee85a14dc",
+                        "documentacion": "Programa unico de seguridad",
+                        "fechaDeCarga": "04/06/2021 ",
+                        "fechaDeVencimiento": "04/06/2021 ",
+                        "accion": "VISTO",
+                        "estado": "ROJO",
+                        "aprobadoPor": "Coca Cola Company",
+                        "observaciones": "Integer orci lacus, feugiat quis ac magna."
+                    }
+                ],
+                "docPersonal": [
+                    {
+                        "id": "18e2193a-zzzz-459e-a5f5-384979de2857",
+                        "documentacion": "Capacitacion sobre el trabajo a realizar ",
+                        "fechaDeCarga": "04/06/2021 ",
+                        "fechaDeVencimiento": "04/06/2021 ",
+                        "accion": "VISTO",
+                        "estado": "ROJO",
+                        "aprobadoPor": "Coca Cola Company",
+                        "observaciones": "Integer vehicula ac magna."
+                    },
+                    {
+                        "id": "bf043284-95a0-zzzz-b495-0631b789adda",
+                        "documentacion": "Alta Temprana",
+                        "fechaDeCarga": "04/06/2021 ",
+                        "fechaDeVencimiento": "04/06/2021 ",
+                        "accion": "NO_VISTO",
+                        "estado": "VERDE",
+                        "aprobadoPor": "Laia S.A.",
+                        "observaciones": "Integer vehicula ac magna."
+                    },
+                    {
+                        "id": "c6e8358e-aaad-yyyy-bb47-809a431ddcc5",
+                        "documentacion": "Recibo Sueldo",
+                        "fechaDeCarga": "04/06/2021 ",
+                        "fechaDeVencimiento": "04/06/2021 ",
+                        "accion": "NO_VISTO",
+                        "estado": "VERDE",
+                        "aprobadoPor": "Laia S.A.",
+                        "observaciones": "Integer orci lacus, vehicula ac magna"
+                    },
+                    {
+                        "id": "e9038321-5385-8888-8610-fb1d302702aa",
                         "documentacion": "Constancia de antecedentes penales",
                         "fechaDeCarga": "04/06/2021 ",
                         "fechaDeVencimiento": "04/06/2021 ",
