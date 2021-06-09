@@ -36,3 +36,18 @@ console.log(restaTotal);                        //output :    -11
  *  
 /***/
 
+console.log('-------------------------------------v2-------------------------------------------')
+//reduce array of object to one object 
+let contratante = [
+    { name: "razonSocial", value: "Marina S.A." },
+    { name: "nombre", value: "Marina" },
+    { name: "apellido", value: "Fernandez" },
+    { name: "cuit", value: "20327777772" },
+    { name: "email", value: "administracion1@admin.com" },
+    { name: "telefono", value: "232323232323" },
+    { name: "password", value: "xXzZzXx" }
+]
+
+let reduceContratante = contratante.reduce((x,z) => { x[z.name] = z.value; return x;})
+
+console.log(reduceContratante);
