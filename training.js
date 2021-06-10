@@ -602,8 +602,8 @@ let id = _.find(contratistas, (z) => {
     return z.id === '32e9ab05-a3a0-404d-9a4b-b9148b4e95f5';
 })
 
-console.log(_.size(id.persona))
-console.log(_.size(id.personaVehiculo))
+console.log(_.size(id.persona)) //3 personas
+console.log(_.size(id.personaVehiculo)) //2 personasvehiculo
 
 //let persona = _.find(contratistas, (z) => z.persona);
 //let persona = _.size(contratistas, 'persona')

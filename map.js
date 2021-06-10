@@ -1,7 +1,7 @@
 const { _, map } = require('underscore')
 
 
-let arr = [4, 8, 1, 2, 9];
+let arr = [4, 8, 1, 2, 9];// un array en let
 
 console.log(arr);
 function duplicar(x) {

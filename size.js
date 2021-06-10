@@ -7,7 +7,7 @@ const { _ } = require('underscore')
  *      => 3
  */
 
-let goal = [
+let objetos = [
     {
         "category": "other",
         "title": "harry University",
@@ -33,7 +33,7 @@ let goal = [
         "id": "4"
     }
 ]
-console.log(_.size(goal));
+console.log(_.size(objetos));
 
 
 

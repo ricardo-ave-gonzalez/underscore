@@ -9,36 +9,68 @@ let arr = [5, 4, 1, 2, 9];
  *             }
  *          return acc;
  *      });
- *  
- */     
+ * 
+ * output :    9   
+ */
+let numeroMayor = arr.reduce((x, z) => z > x ? z : x);
+console.log(numeroMayor);
 
-let masAlto = arr.reduce(( acc, val ) => val > acc ? val : acc);
-console.log(masAlto);                           //output :    9          
-// numero mas bajo
-let masBajo = arr.reduce(( acc, val ) => val < acc ? val : acc);
-console.log(masBajo);                           //output :    1
-// suma de total de los numeros impares
-let numerosImpares = arr.reduce(( acc, val ) => val = ( val % 2 ) ?  acc + val : acc ); 
-console.log(numerosImpares);                    //output :    15
-// la multiplicación de los impares
-let imparesMultiplicados = arr.reduce(( acc, val ) => val = ( val % 2 ) ? ( acc * val ) : acc ); 
-console.log(imparesMultiplicados);              //output :    45
-//la suma de todos los elementos del array
-let sumaTotal = arr.reduce(( acc, val ) => acc + val);
-console.log(sumaTotal);                         //output :    21
-//la resta de todos los elementos del array
-let restaTotal = arr.reduce(( acc, val ) => acc - val);
-console.log(restaTotal);                        //output :    -11
+/**
+ * output :    1
+ * reduce al mas bajo
+ */
+let numeroMenor = arr.reduce((x, z) => z < x ? z : x);
+console.log(numeroMenor);
+
+/**
+ * output :    15
+ * reduce a la suma total de los impares
+ */
+let sumaNumerosImpares = arr.reduce((x, z) => z = (z % 2) ? x + z : x);
+console.log(sumaNumerosImpares);
+
+/**
+ * output :    45
+ * reduce a la multiplicación de los impares
+ */
+let imparesMultiplicados = arr.reduce((x, z) => z = (z % 2) ? (x * z) : x);
+console.log(imparesMultiplicados);
+
+/**
+ * output :    21
+ * reduce la suma de todos los elementos del array
+ */
+let sumaElementosArray = arr.reduce((x, z) => x + z);
+console.log(sumaElementosArray);
+
+/**
+ * output :    -11
+ * la resta de todos los elementos del array
+ */
+let restaTotal = arr.reduce((x, z) => x - z);
+console.log(restaTotal);
+
 /**
  * 
  * https://underscorejs.org/ 
- * :)
- *  
-/***/
-
+ */
 console.log('-------------------------------------v2-------------------------------------------')
-//reduce array of object to one object 
-let contratante = [
+
+/**
+ * Output
+ *   {
+ *     name: 'razonSocial',
+ *     value: 'Marina S.A.',
+ *     nombre: 'Marina',
+ *     apellido: 'Fernandez',
+ *     cuit: '20327777772',
+ *     email: 'administracion1@admin.com',
+ *     telefono: '232323232323',
+ *     password: 'xXzZzXx'
+ *   }
+ * reduce array of object to one object 
+ */
+let arr2 = [
     { name: "razonSocial", value: "Marina S.A." },
     { name: "nombre", value: "Marina" },
     { name: "apellido", value: "Fernandez" },
@@ -47,7 +79,5 @@ let contratante = [
     { name: "telefono", value: "232323232323" },
     { name: "password", value: "xXzZzXx" }
 ]
-
-let reduceContratante = contratante.reduce((x,z) => { x[z.name] = z.value; return x;})
-
-console.log(reduceContratante);
+let reduceArrayOfObjectToOneObject = arr2.reduce((x, z) => { x[z.name] = z.value; return x; })
+console.log(reduceArrayOfObjectToOneObject);
