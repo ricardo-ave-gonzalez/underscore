@@ -1,4 +1,4 @@
-const { reduce } = require('underscore');
+const { _ } = require('underscore');
 
 let arr = [5, 4, 1, 2, 9];
 /**
@@ -33,22 +33,22 @@ console.log(sumaNumerosImpares);
  * output :    45
  * reduce a la multiplicación de los impares
  */
-let imparesMultiplicados = arr.reduce((x, z) => z = (z % 2) ? (x * z) : x);
-console.log(imparesMultiplicados);
+let multiplicaNumerosImpares = arr.reduce((x, z) => z = (z % 2) ? (x * z) : x);
+console.log(multiplicaNumerosImpares);
 
 /**
  * output :    21
  * reduce la suma de todos los elementos del array
  */
-let sumaElementosArray = arr.reduce((x, z) => x + z);
-console.log(sumaElementosArray);
+let sumaElementosDeLaLista = arr.reduce((x, z) => x + z);
+console.log(sumaElementosDeLaLista);
 
 /**
  * output :    -11
  * la resta de todos los elementos del array
  */
-let restaTotal = arr.reduce((x, z) => x - z);
-console.log(restaTotal);
+let restaElementosDeLaLista = arr.reduce((x, z) => x - z);
+console.log(restaElementosDeLaLista);
 
 /**
  * 
@@ -79,5 +79,38 @@ let arr2 = [
     { name: "telefono", value: "232323232323" },
     { name: "password", value: "xXzZzXx" }
 ]
-let reduceArrayOfObjectToOneObject = arr2.reduce((x, z) => { x[z.name] = z.value; return x; })
-console.log(reduceArrayOfObjectToOneObject);
+let reduceAUnObjeto = arr2.reduce((x, z) => { x[z.name] = z.value; return x; })
+console.log(reduceAUnObjeto);
+
+
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+
+const input = [
+    { "score": 2, "name": "Jon", "venue": "A" },
+    { "score": 3, "name": "Jeff", "venue": "A" },
+    { "score": 4, "name": "Jon", "venue": "B" },
+    { "score": 4, "name": "Jeff", "venue": "B" }
+];
+
+const output = _.map(_.groupBy(input, "name"), function (group, name) {
+    return _.reduce(group, function (z, elem) {
+        z.score += elem.score;
+        z.venue.push(elem.venue);
+        return z;
+    },
+        { name: name, score: 0, venue: [] });
+});
+
+
+console.log(output);
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+var arr3 = ['docInstitucional', 'docInstitucional', 'docPersona', 'docVehiculo', 'docVehiculo', 'docVehiculo']
+const output2 = arr3.reduce((arr3, z) => (arr3[z] = (arr3[z] || 0) + 1, arr3), {})
+console.log(output2)
+
+
+
+

@@ -602,8 +602,19 @@ let id = _.find(contratistas, (z) => {
     return z.id === '32e9ab05-a3a0-404d-9a4b-b9148b4e95f5';
 })
 
+let martin = _.find(contratistas, (z) => {
+    return z.id === `746fb6f8-899c-4405-814a-5aa7353db124`;
+})
+
 console.log(_.size(id.persona)) //3 personas
 console.log(_.size(id.personaVehiculo)) //2 personasvehiculo
+console.log(_.size(id.docInstitucionalEmpresa))
+
+
+
+
+console.log('----------------------------------------------------------------------------')
+console.log(_.size(martin.docInstitucionalEmpresa))
 
 //let persona = _.find(contratistas, (z) => z.persona);
 //let persona = _.size(contratistas, 'persona')
@@ -613,3 +624,9 @@ console.log(_.size(id.personaVehiculo)) //2 personasvehiculo
 //var grouped = _.groupBy(contratistas, 'length')
 //console.log(grouped)
 //console.log(_.sortBy(contratistas, 'persona'))
+
+
+console.log('----------------------------------------------------------------------------')
+//console.log(_.detect(list, function (obj) {return obj.doc.id === "123"}))
+
+

@@ -1,4 +1,4 @@
-const _ = require('underscore');
+const { _ }  = require('underscore');
 /**
  * Examina cada valor en la lista, devolviendo el primero que pasa en true
  * (predicado), o undefined, sí ningún valor pasa la prueba. 
@@ -12,10 +12,6 @@ console.log(siempre)
 //=======================================================================================//
 
 console.log('~~~~~~~~~~~~~~~~~~~versión~~~~~~~~~~~~~~~~~~~~~~')
-
-const even = _.find([1, 2, 3, 4, 5, 6], (num) => num % 2 === 0);
-
-console.log(even);
 
 const find2 = (list, fun, context) => {
     for (const idx in list) {
@@ -38,8 +34,8 @@ const even3 = find2(
     ({ age }, idx, arr) => age % 2 === 0
 )
 
+
 console.log(even3)
 
 //=======================================================================================//
-
 
