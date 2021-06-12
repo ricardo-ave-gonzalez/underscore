@@ -1,3 +1,3 @@
 # Underscore
 
-#Proyect in a line in progress
+functional programming in progress
