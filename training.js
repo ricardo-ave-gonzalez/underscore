@@ -608,6 +608,8 @@ let martin = _.find(contratistas, (z) => {
 
 console.log(_.size(id.persona)) //3 personas
 console.log(_.size(id.personaVehiculo)) //2 personasvehiculo
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 console.log(_.size(id.docInstitucionalEmpresa))
 
 

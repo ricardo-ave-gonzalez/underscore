@@ -34,7 +34,7 @@ console.log('-------------------------------------------------------------------
 
 //valor = valor.map(v => Math.random());
 let arrNuevo = new Array(100);
-arrNuevo = arrNuevo.fill(0).map(v => Math.random());
+//arrNuevo = arrNuevo.fill(0).map(v => Math.random());
 console.log(arrNuevo);
 console.log('-----------------------------------------------------------------------')
 console.log('-----------------------------INCREIBLE---------------------------------')

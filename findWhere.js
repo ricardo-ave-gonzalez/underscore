@@ -36,7 +36,7 @@ const doc = {
         }
     ]
 }
+console.log('~~~~~~~~~~~~~~~~~~Doc VTV~~~~~~~~~~~~~~~~~~~~~~')
+const buscarDonde = _.findWhere(doc.body,  { documentacion : "VTV"})
+console.log(buscarDonde)
 
-//const buscarDonde = _.findWhere(doc, { body, { "documento" : "VTV"}})
-const cierto = _.every(doc, function(z) { return z % 2 == 0; });
-console.log(cierto);

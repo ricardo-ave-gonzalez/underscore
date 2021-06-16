@@ -3,11 +3,11 @@ const { _ } = require('underscore');
 let arr = [5, 4, 1, 2, 9];
 /**
  * 
- *      let masAlto = valor.reduce((acc, val) =>{ 
- *          if(val > acc){
- *             acc = val;
+ *      let masAlto = valor.reduce((z, a) =>{ 
+ *          if(a > z){
+ *             z = a;
  *             }
- *          return acc;
+ *          return z;
  *      });
  * 
  * output :    9   

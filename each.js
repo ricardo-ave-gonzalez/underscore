@@ -16,7 +16,7 @@ console.log('analizar')
 _.each(arr, (value, index, list) => {
   console.log("value -> ", value, "index -> ", index);
   console.log(list);
-})
+})  
 console.log('-------------------------------------------------------------------------------')
 console.log('-------------------------------------------------------------------------------')
 
