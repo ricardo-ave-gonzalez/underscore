@@ -1,5 +1,5 @@
-const { _ } = require('underscore');
-
+//const { _ } = require('underscore');
+import _ from 'underscore';
 
 var goal  = [
 

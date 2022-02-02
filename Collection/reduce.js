@@ -1,4 +1,5 @@
-const { _ } = require('underscore');
+//const { _ } = require('underscore');
+import _ from 'underscore';
 
 let arr = [5, 4, 1, 2, 9];
 /**

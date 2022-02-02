@@ -1,4 +1,5 @@
-const { _ } = require('underscore')
+//const { _ } = require('underscore')
+import _ from 'underscore';
 
 /**
  * Parameters: This function accepts three parameters as mentioned above and described below:

@@ -1,4 +1,5 @@
-const { max } = require('underscore')
+//const { max } = require('underscore')
+import _ from 'underscore';
 
 const arr = [
   { name: 'ricardito', age: 32 },

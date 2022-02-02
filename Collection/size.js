@@ -1,4 +1,5 @@
-const { _ } = require('underscore')
+//const { _ } = require('underscore')
+import _ from 'underscore';
 /**
  *      Return the number of values in the list.
  *      _.size([1, 2, 3, 4, 5]);

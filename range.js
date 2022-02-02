@@ -1,4 +1,6 @@
-const _ = require('underscore');
+//const _ = require('underscore');
+import _ from 'underscore';
+
 // range_.range ([start], stop, [step]) 
 // Una función para crear listas de números enteros numeradas de manera flexible, 
 // útil para cada bucle y mapa. inicio, si se omite, por defecto es 0; 

@@ -1,4 +1,5 @@
-const { _ } = require('underscore');
+//const { _ } = require('underscore');
+import _ from 'underscore';
 
 console.log('-------------------------------------------------------------------------------')
 var arr = [1, 2, 3, 4, 5, 6, 7, 8];

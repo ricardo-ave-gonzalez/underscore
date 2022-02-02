@@ -1,4 +1,5 @@
-const { filter } = require('underscore')
+//const { filter } = require('underscore')
+import _ from 'underscore';
 
 let arr = [5, 4, undefined, 2, 9];
 //arr = arr.filter( z => z % 2 == 0 );        //  output [ 4, 2 ]

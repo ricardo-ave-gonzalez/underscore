@@ -1,5 +1,5 @@
-const { _, map } = require('underscore')
-
+//const { _, map } = require('underscore')
+import _ from 'underscore';
 
 let arr = [4, 8, 1, 2, 9];// un array en let
 
