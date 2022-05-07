@@ -2,95 +2,107 @@ import _ from 'underscore';
 
 var a = [
     {
-        "ListingId": 1762276,
+        "id": 1762276,
         "Rating": 3,
-        "ListPrice": 7411828,
-        "PropertyType": "Residential"
+        "precio": 7411828,
+        "docuRequerido": true
     },
     {
-        "ListingId": 1826692,
+        "id": 1826692,
         "Rating": 3,
-        "ListPrice": 650000,
-        "PropertyType": "Residential"
+        "precio": 650000,
+        "docuRequerido": false
     },
     {
-        "ListingId": 1833283,
+        "id": 1833283,
         "Rating": 4,
-        "ListPrice": 950000,
-        "PropertyType": "Residential"
+        "precio": 950000,
+        "docuRequerido": true
     },
     {
-        "ListingId": 1832134,
+        "id": 1832134,
         "Rating": 3,
-        "ListPrice": 850000,
-        "PropertyType": "Residential"
+        "precio": 850000,
+        "docuRequerido": false
     },
     {
-        "ListingId": 1829932,
+        "id": 1829555,
         "Rating": 4,
-        "ListPrice": 750000,
-        "PropertyType": "Residential"
+        "precio": 750000,
+        "docuRequerido": true
     },
     {
-        "ListingId": 1827548,
+        "id": 1827548,
         "Rating": 5,
-        "ListPrice": 650000,
-        "PropertyType": "Residential"
+        "precio": 650000,
+        "docuRequerido": false
     }
 ];
 
 var b = [
     {
-        "ListingId": 1762276,
+        "id": 1762276,
         "Rating": 2,
-        "ListPrice": 7411828,
-        "PropertyType": "Residential"
+        "precio": 7411828,
+        "docuRequerido": false
     },
     {
-        "ListingId": 1826692,
+        "id": 1826692,
         "Rating": 3,
-        "ListPrice": 650000,
-        "PropertyType": "Residential"
+        "precio": 650000,
+        "docuRequerido": true
     },
     {
-        "ListingId": 1833283,
+        "id": 1833283,
         "Rating": 4,
-        "ListPrice": 950000,
-        "PropertyType": "Residential"
+        "precio": 950000,
+        "docuRequerido": false
     },
     {
-        "ListingId": 1832134,
+        "id": 1832134,
         "Rating": 3,
-        "ListPrice": 850000,
-        "PropertyType": "Residential"
+        "precio": 850000,
+        "docuRequerido": true
     },
     {
-        "ListingId": 1829932,
+        "id": 1829932,
         "Rating": 4,
-        "ListPrice": 750000,
-        "PropertyType": "Residential"
+        "precio": 750000,
+        "docuRequerido": false
     },
     {
-        "ListingId": 1827548,
+        "id": 1827548,
         "Rating": 5,
-        "ListPrice": 650000,
-        "PropertyType": "Residential"
+        "precio": 650000,
+        "docuRequerido": true
     }
 ]
 
-var difference = function (array) {
-    var rest = Array.prototype.concat.apply(Array.prototype, Array.prototype.slice.call(arguments, 1));
-
-    var containsEquals = function (obj, target) {
-        if (obj == null) return false;
-        return _.any(obj, function (value) {
-            return _.isEqual(value, target);
-        });
-    };
-
-    return _.filter(array, function (value) {
-        return !containsEquals(rest, value);
+function obtenerArrayParaInsertar(array1, array2) {
+    if (!_.isArray(array1) || !Array.isArray(array2)) {
+        throw TypeError('Los parametros deben ser arreglos.');
+    }
+    var diff = _.difference(_.pluck(array1, "id"), _.pluck(array2, "id"));
+    return _.filter(array1, z => {
+        if (z.docuRequerido) {
+            return diff.indexOf(z.id) >= 0;
+        }
     });
-};
+}
 
-console.log(JSON.stringify(difference(b, a)));
+function obtenerArrayParaDeshabilitar(array1, array2) {
+    if (!_.isArray(array1) || !_.isArray(array2)) {
+        throw TypeError('Los parametros deben ser arreglos.');
+    }
+
+    return _.filter(array1, x => {
+        return _.some(array2, z => {
+            if (z.id === x.id && !z.docuRequerido) {
+                return { id: x.id, owner: x.owner }
+            }
+        })
+    })
+}
+
+console.log(obtenerArrayParaInsertar(a, b));
+console.log(obtenerArrayParaDeshabilitar(a, b));
